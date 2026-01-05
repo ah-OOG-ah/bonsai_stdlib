@@ -1,6 +1,7 @@
 #include <bonsai/work_queue.h>
 
-#include <bonsai/iterators.h>
+#include <bonsai/memory_arena.h>
+#include <bonsai/platform_struct.h>
 
 link_internal work_queue_entry *
 PopWorkQueueEntry(work_queue* Queue)

@@ -1,7 +1,9 @@
 #include <bonsai/console_macros.h>
+#include <bonsai/gl.h>
 #include <bonsai/globals.h>
 #include <bonsai/input.h>
 #include <bonsai/platform.h>
+#include <bonsai/platform_struct.h>
 #include <bonsai/thread.h>
 #include <bonsai/work_queue.h>
 #include <bonsai/ui/ui.h>

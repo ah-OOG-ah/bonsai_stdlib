@@ -1,3 +1,5 @@
+#pragma once
+
 struct random_series;
 struct memory_arena;
 struct ansi_stream;

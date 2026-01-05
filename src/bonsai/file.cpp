@@ -1,3 +1,5 @@
+#include <bonsai/file.h>
+
 #define TMP_DIR_ROOT "tmp/"
 
 #include <sys/stat.h>

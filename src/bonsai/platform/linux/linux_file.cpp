@@ -1,3 +1,8 @@
+#include <bonsai/platform/linux/linux_file.h>
+
+#include <bonsai/file.h>
+#include <bonsai/primitives.h>
+#include <bonsai/platform/posix_platform.h>
 
 #include <ftw.h>
 

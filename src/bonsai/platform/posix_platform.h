@@ -1,6 +1,7 @@
 #pragma once
 
 #include <bonsai/primitives.h>
+#include <bonsai/thread.h>
 
 #include <stdio.h>
 #include <pthread.h>
@@ -42,10 +43,11 @@ typedef pthread_mutex_t native_mutex;
 
 typedef void* shared_lib;
 
+u32 PlatformGetLogicalCoreCount();
+
 link_internal void SleepMs(u32 Ms);
 
-
-u32 PlatformGetLogicalCoreCount();
+u32 PlatformCreateThread( thread_main_callback_type ThreadMain, void *Params, s32 ThreadId);
 
 inline void
 WakeThread( semaphore *Semaphore )

@@ -17,11 +17,13 @@ add_library(Bonsai SHARED
 
         src/bonsai/avx2_v3.h
         src/bonsai/console_macros.h
+        src/bonsai/file.h
         src/bonsai/globals.h
         src/bonsai/input.h
         src/bonsai/maff.h
         src/bonsai/memory_arena.h
         src/bonsai/platform.h
+        src/bonsai/platform/linux/linux_file.h
         src/bonsai/platform/linux/linux_platform.h
         src/bonsai/platform/posix_platform.h
         src/bonsai/platform_struct.h
@@ -33,7 +35,10 @@ add_library(Bonsai SHARED
         src/bonsai/work_queue.h
 
         src/bonsai/initialize.cpp
+        src/bonsai/file.cpp
         src/bonsai/memory_arena.cpp
+        src/bonsai/platform/linux/linux_file.cpp
+        src/bonsai/platform/linux/linux_platform.cpp
         src/bonsai/platform/posix_platform.cpp
         src/bonsai/thread.cpp
         src/bonsai/work_queue.cpp
