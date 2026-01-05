@@ -1,5 +1,10 @@
 #include <bonsai/file.h>
 
+#include <bonsai/counted_string.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+#include <bonsai/platform.h>
+
 #define TMP_DIR_ROOT "tmp/"
 
 #include <sys/stat.h>

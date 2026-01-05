@@ -1,3 +1,5 @@
+#include <bonsai/c_parser.h>
+
 poof(hashtable(parser))
 #include <generated/hashtable_parser.h>
 

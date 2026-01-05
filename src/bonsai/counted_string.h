@@ -1,3 +1,10 @@
+#pragma once
+
+#include <bonsai/assert.h>
+#include <bonsai/console_macros.h>
+#include <bonsai/memory_arena.h>
+#include <bonsai/primitives.h>
+
 link_internal void
 CopyString(cs *Src, cs *Dest)
 {

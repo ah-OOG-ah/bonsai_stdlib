@@ -17,6 +17,9 @@ add_library(Bonsai SHARED
 
         src/bonsai/avx2_v3.h
         src/bonsai/console_macros.h
+        src/bonsai/counted_string.h
+        src/bonsai/c_parser.h
+        src/bonsai/c_token.h
         src/bonsai/file.h
         src/bonsai/globals.h
         src/bonsai/input.h
@@ -34,8 +37,9 @@ add_library(Bonsai SHARED
         src/bonsai/vector.h
         src/bonsai/work_queue.h
 
-        src/bonsai/initialize.cpp
+        src/bonsai/c_parser.cpp
         src/bonsai/file.cpp
+        src/bonsai/initialize.cpp
         src/bonsai/memory_arena.cpp
         src/bonsai/platform/linux/linux_file.cpp
         src/bonsai/platform/linux/linux_platform.cpp

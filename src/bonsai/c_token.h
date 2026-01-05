@@ -1,3 +1,4 @@
+#pragma once
 
 struct c_token_cursor;
 struct macro_def;

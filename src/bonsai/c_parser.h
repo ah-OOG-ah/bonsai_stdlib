@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/counted_string.h>
+#include <bonsai/c_token.h>
+#include <bonsai/primitives.h>
 
 #define InvalidDefaultWhileParsing(P, ErrorMessage) \
     default: { ParseError(P, ErrorMessage, PeekTokenPointer(P)); } break;
