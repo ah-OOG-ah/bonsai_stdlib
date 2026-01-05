@@ -994,6 +994,7 @@ PlatformChangeDirectory(const char *Dir)
 }
 
 b32 ProcessOsMessages(os *Os, platform *Plat);
+inline void BonsaiSwapBuffers(os *Os);
 
 link_internal void
 PlatformInitializeStdout(native_file *Stdout, native_file *Log);

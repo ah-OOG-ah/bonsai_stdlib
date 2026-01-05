@@ -1,10 +1,13 @@
 #pragma once
 
 #include <bonsai/colors.h>
+#include <bonsai/geometry_buffer.h>
 #include <bonsai/gpu_mapped_buffer.h>
 #include <bonsai/memory_arena.h>
 #include <bonsai/poof_on.h>
 #include <bonsai/primitives.h>
+#include <bonsai/rect.h>
+#include <bonsai/sort.h>
 #include <bonsai/shader.h>
 #include <bonsai/texture.h>
 #include <bonsai/ui/interactable.h>
@@ -1298,7 +1301,9 @@ GetDim(window_layout *Window)
   return Result;
 }
 
-
+link_internal void SetWindowZDepths(ui_render_command_buffer *CommandBuffer);
+link_internal void FlushCommandBuffer(renderer_2d *Group, render_state *RenderState,
+  ui_render_command_buffer *CommandBuffer, layout *DefaultLayout);
 link_internal void DrawUi(renderer_2d *Group, ui_render_command_buffer *CommandBuffer);
 link_internal void UiFrameBegin(renderer_2d *Ui);
 link_internal void DrawUiBuffer(gpu_mapped_ui_buffer *Buffer, v2 *ScreenDim);
@@ -1312,3 +1317,4 @@ DrawButtonGroup(ui_toggle_button_group *Group, cs  Name, ui_render_params *Eleme
 
 link_internal void
 DoTextEditInteraction(renderer_2d *Ui);
+link_internal void UiFrameEnd(renderer_2d *Ui);
