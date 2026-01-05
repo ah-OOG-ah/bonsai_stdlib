@@ -1,3 +1,14 @@
+#include "posix_platform.h"
+
+#include <bonsai/assert.h>
+#include <bonsai/console_macros.h>
+#include <bonsai/globals.h>
+#include <bonsai/memory_arena.h>
+#include <bonsai/mutex.h>
+#include <bonsai/primitives.h>
+
+#include <bonsai_debug/src/api.h>
+
 inline void
 PrintSemValue(semaphore *Semaphore)
 {
