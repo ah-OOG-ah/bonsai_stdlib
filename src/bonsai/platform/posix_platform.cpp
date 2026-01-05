@@ -1,11 +1,13 @@
 #include "posix_platform.h"
 
+#include <cerrno>
 #include <bonsai/assert.h>
 #include <bonsai/console_macros.h>
 #include <bonsai/globals.h>
 #include <bonsai/memory_arena.h>
 #include <bonsai/mutex.h>
 #include <bonsai/primitives.h>
+#include <bonsai/thread.h>
 
 #include <bonsai_debug/src/api.h>
 
