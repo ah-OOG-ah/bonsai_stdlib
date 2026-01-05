@@ -13,6 +13,15 @@ add_compile_options(-mssse3 -mavx -mavx2 -mfma -mvaes)
 
 project(Bonsai)
 add_library(Bonsai SHARED
+        src/bonsai/console_macros.h
+        src/bonsai/platform.h
+        src/bonsai/platform/linux/linux_platform.h
+        src/bonsai/thread.h
+
+        src/bonsai/initialize.cpp
+
+        bonsai_debug/src/debug_data_system.cpp
+        bonsai_debug/src/debug_render_system.cpp
         bonsai_debug/debug.h
         bonsai_debug/debug.cpp
         bonsai_stdlib.h

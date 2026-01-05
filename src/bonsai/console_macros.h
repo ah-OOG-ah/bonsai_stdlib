@@ -1,3 +1,7 @@
+#pragma once
+
+#include "primitives.h"
+
 global_variable const umm TempStdoutFormatStringBufferSize = 64*1024;
 global_variable char TempStdoutFormatStringBuffer[TempStdoutFormatStringBufferSize];
 

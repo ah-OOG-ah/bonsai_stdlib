@@ -1,3 +1,9 @@
+#pragma once
+
+#include <bonsai/assert.h>
+#include <bonsai/globals.h>
+#include <bonsai/console_macros.h>
+
 /* #include <linux/ftrace.h> */
 /* #include <linux/getcpu.h> */
 
