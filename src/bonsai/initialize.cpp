@@ -1,5 +1,4 @@
 #include <bonsai/console_macros.h>
-#include <bonsai/primitives.h>
 #include <bonsai/thread.h>
 #include <bonsai_stdlib.h>
 #include <bonsai/platform.h>

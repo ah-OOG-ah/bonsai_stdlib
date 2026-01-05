@@ -1,3 +1,5 @@
+#pragma once
+
 /* #define BONSAI_NO_AVX */
 
 #define MAIN_THREAD_ThreadLocal_ThreadIndex (0)

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <bonsai/primitives.h>
+
 #include <stdio.h>
 #include <pthread.h>
 
@@ -41,6 +43,9 @@ typedef pthread_mutex_t native_mutex;
 typedef void* shared_lib;
 
 link_internal void SleepMs(u32 Ms);
+
+
+u32 PlatformGetLogicalCoreCount();
 
 inline void
 WakeThread( semaphore *Semaphore )
