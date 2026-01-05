@@ -203,12 +203,6 @@ link_internal b32 AreEqual(cs *S1, cs *S2);
 link_internal b32 AreEqual(cs S1, cs S2);
 link_internal b32 AreEqual(const char *S1, const char *S2);
 
-template <typename T> inline void
-Clear(T *Struct)
-{
-  Fill(Struct, 0);
-}
-
 poof(
   func gen_are_equal( type_poof_symbol Types )
   {

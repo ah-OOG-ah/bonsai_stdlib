@@ -248,6 +248,12 @@ Fill(T *Struct, u8 ByteValue)
 #endif
 }
 
+template <typename T> inline void
+Clear(T *Struct)
+{
+  Fill(Struct, 0);
+}
+
 b32
 OnPageBoundary(memory_arena *Arena, umm PageSize)
 {
