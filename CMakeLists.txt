@@ -15,6 +15,7 @@ project(Bonsai)
 add_library(Bonsai SHARED
         src/bonsai/console_macros.h
         src/bonsai/globals.h
+        src/bonsai/input.h
         src/bonsai/memory_arena.h
         src/bonsai/platform.h
         src/bonsai/platform/linux/linux_platform.h
@@ -22,9 +23,11 @@ add_library(Bonsai SHARED
         src/bonsai/platform_struct.h
         src/bonsai/poof_functions.h
         src/bonsai/thread.h
+        src/bonsai/ui/ui.h
         src/bonsai/work_queue.h
 
         src/bonsai/platform/posix_platform.cpp
+        src/bonsai/thread.cpp
         src/bonsai/initialize.cpp
 
         bonsai_debug/src/debug_data_system.cpp

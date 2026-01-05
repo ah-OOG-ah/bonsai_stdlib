@@ -1,3 +1,7 @@
+#include <bonsai/thread.h>
+#include <bonsai/maff.h>
+#include <bonsai/memory_arena.h>
+
 poof(buffer(thread_main_callback_type))
 #include <generated/buffer_thread_main_callback_type.h>
 

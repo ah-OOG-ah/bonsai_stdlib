@@ -196,6 +196,11 @@ SetThreadLocal_ThreadIndex(s32 Index)
   ThreadLocal_ThreadIndex = Index;
 }
 
+link_internal thread_local_state* Initialize_ThreadLocal_ThreadStates(
+  platform *Plat,
+  s32 TotalThreadCount,
+  void *ThreadState_UserData,
+  memory_arena* Memory);
 link_internal thread_local_state *
 GetThreadLocalState(s32 ThreadIndex);
 

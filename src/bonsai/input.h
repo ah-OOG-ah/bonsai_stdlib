@@ -1,3 +1,4 @@
+#pragma once
 
 struct input_event
 poof(@do_editor_ui)

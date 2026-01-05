@@ -1,3 +1,5 @@
+#pragma once
+
 // TODO(Jesse): Get rid of these; we used to pass individual parameters and
 // have since packed them into that struct
 #define UI_FUNCTION_PROTO_NAMES     ui_render_params *Params

@@ -1,8 +1,11 @@
 #include <bonsai/console_macros.h>
-#include <bonsai/thread.h>
-#include <bonsai_stdlib.h>
-#include <bonsai/platform.h>
 #include <bonsai/globals.h>
+#include <bonsai/input.h>
+#include <bonsai/platform.h>
+#include <bonsai/thread.h>
+#include <bonsai/work_queue.h>
+#include <bonsai/ui/ui.h>
+#include <bonsai_stdlib.h>
 
 #if BONSAI_DEBUG_SYSTEM_API
 void Platform_EnableContextSwitchTracing();
