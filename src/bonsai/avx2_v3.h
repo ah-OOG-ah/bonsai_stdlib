@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/iterators.h>
+#include <bonsai/simd_avx2.h>
 
 union v3_8x
 {

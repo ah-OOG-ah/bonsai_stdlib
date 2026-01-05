@@ -13,6 +13,7 @@ add_compile_options(-mssse3 -mavx -mavx2 -mfma -mvaes)
 
 project(Bonsai)
 add_library(Bonsai SHARED
+        src/bonsai/avx2_v3.h
         src/bonsai/console_macros.h
         src/bonsai/globals.h
         src/bonsai/input.h
@@ -22,8 +23,10 @@ add_library(Bonsai SHARED
         src/bonsai/platform/posix_platform.h
         src/bonsai/platform_struct.h
         src/bonsai/poof_functions.h
+        src/bonsai/primitives.h
         src/bonsai/thread.h
         src/bonsai/ui/ui.h
+        src/bonsai/vector.h
         src/bonsai/work_queue.h
 
         src/bonsai/platform/posix_platform.cpp

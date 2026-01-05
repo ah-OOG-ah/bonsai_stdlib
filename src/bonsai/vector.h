@@ -1,3 +1,9 @@
+#pragma once
+
+#include <bonsai/assert.h>
+#include <bonsai/maff.h>
+#include <bonsai_stdlib.h>
+
 /* #if BONSAI_EMCC */
 /* #include <wasm_simd128.h> */
 /* typedef v128_t __m128; */

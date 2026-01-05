@@ -1,5 +1,10 @@
 #pragma once
 
+#include <bonsai/avx2_v3.h>
+#include <bonsai/platform.h>
+#include <bonsai/vector.h>
+#include <bonsai_stdlib.h>
+
 struct input_event
 poof(@do_editor_ui)
 {
