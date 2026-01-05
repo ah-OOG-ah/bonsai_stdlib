@@ -1,3 +1,7 @@
+#include <bonsai/counted_string.h>
+
+#include <bonsai/heap_allocator.h>
+#include <bonsai/vector.h>
 
 // This is to silence the warnings when passing counted_strings
 #define FormatCountedString(Memory, Fmt, ...)             \
@@ -235,7 +239,7 @@ ConcatZ(cs S1, cs S2, cs S3, memory_arena* Memory)
 }
 
 link_internal const char*
-GetNullTerminated(counted_string Str, memory_arena* Memory = 0)
+GetNullTerminated(counted_string Str, memory_arena* Memory)
 {
   if (Memory == 0) { Memory = GetTranArena(); }
   /* if (Memory == 0) { Memory = GetTranArena(); } */

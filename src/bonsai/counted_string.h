@@ -19,6 +19,7 @@ CopyString(const char *Src, const char *Dest, umm Count)
   MemCopy((u8*)Src, (u8*)Dest, Count);
 }
 
+link_internal const char* GetNullTerminated(counted_string Str, memory_arena* Memory = 0);
 
 link_internal void
 DeepCopy(cs *S1, cs *S2)

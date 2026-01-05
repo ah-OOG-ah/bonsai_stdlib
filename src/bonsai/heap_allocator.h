@@ -1,3 +1,5 @@
+#pragma once
+
 // TODO(Jesse): Support alignment
 #define HeapAlloc(type, heap, count, ...) \
   (type*)HeapAllocate( (heap), sizeof(type)*count )

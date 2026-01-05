@@ -22,6 +22,7 @@ add_library(Bonsai SHARED
         src/bonsai/c_token.h
         src/bonsai/file.h
         src/bonsai/globals.h
+        src/bonsai/heap_allocator.h
         src/bonsai/input.h
         src/bonsai/maff.h
         src/bonsai/memory_arena.h
@@ -37,6 +38,7 @@ add_library(Bonsai SHARED
         src/bonsai/vector.h
         src/bonsai/work_queue.h
 
+        src/bonsai/counted_string.cpp
         src/bonsai/c_parser.cpp
         src/bonsai/file.cpp
         src/bonsai/initialize.cpp

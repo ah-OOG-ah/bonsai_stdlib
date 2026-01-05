@@ -1,5 +1,9 @@
 #pragma once
 
+#include <bonsai/platform.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+
 struct random_series;
 struct memory_arena;
 struct ansi_stream;
