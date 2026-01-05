@@ -3,6 +3,7 @@
 #include <bonsai/assert.h>
 #include <bonsai/globals.h>
 #include <bonsai/console_macros.h>
+#include <bonsai/platform/posix_platform.h>
 
 /* #include <linux/ftrace.h> */
 /* #include <linux/getcpu.h> */
@@ -991,6 +992,8 @@ PlatformChangeDirectory(const char *Dir)
   b32 Result = (_chdir("..") == 0);
   return Result;
 }
+
+b32 ProcessOsMessages(os *Os, platform *Plat);
 
 link_internal void
 PlatformInitializeStdout(native_file *Stdout, native_file *Log);

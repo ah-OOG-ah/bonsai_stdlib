@@ -1,3 +1,10 @@
+#include <bonsai/platform/linux/linux_platform.h>
+
+#include <bonsai/file.h>
+#include <bonsai/gl.h>
+#include <bonsai/platform_struct.h>
+#include <bonsai/vector.h>
+
 #if BONSAI_NETWORK_IMPLEMENTATION
 #include <bonsai_net/network.h>
 #endif
