@@ -1,0 +1,3 @@
+[submodule "bonsai_debug"]
+	path = bonsai_debug
+	url = https://github.com/ah-OOG-ah/bonsai_debug
