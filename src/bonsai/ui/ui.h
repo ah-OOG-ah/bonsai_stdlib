@@ -1,5 +1,15 @@
 #pragma once
 
+#include <bonsai/colors.h>
+#include <bonsai/gpu_mapped_buffer.h>
+#include <bonsai/memory_arena.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+#include <bonsai/shader.h>
+#include <bonsai/texture.h>
+#include <bonsai/ui/interactable.h>
+#include <bonsai/vector.h>
+
 // TODO(Jesse): Get rid of these; we used to pass individual parameters and
 // have since packed them into that struct
 #define UI_FUNCTION_PROTO_NAMES     ui_render_params *Params
@@ -1290,6 +1300,7 @@ GetDim(window_layout *Window)
 
 
 link_internal void DrawUi(renderer_2d *Group, ui_render_command_buffer *CommandBuffer);
+link_internal void UiFrameBegin(renderer_2d *Ui);
 link_internal void DrawUiBuffer(gpu_mapped_ui_buffer *Buffer, v2 *ScreenDim);
 
 link_internal clip_result BufferTexturedQuad( renderer_2d *Group, ui_geometry_buffer *Geo, v2  MinP, v2 Dim, v3 Color, r32 Z, rect2 Clip);

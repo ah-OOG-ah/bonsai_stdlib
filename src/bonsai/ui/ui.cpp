@@ -1,3 +1,17 @@
+#include <bonsai/ui/ui.h>
+
+#include <bonsai/bitmap.h>
+#include <bonsai/bit_tricks.h>
+#include <bonsai/console_macros.h>
+#include <bonsai/geometry_buffer.h>
+#include <bonsai/platform.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+#include <bonsai/rect.h>
+#include <bonsai/stream.h>
+#include <bonsai/ui/interactable.h>
+#include <bonsai/vector.h>
+
 /* link_internal void */
 /* AllocateGpuElementBuffer(gpu_element_buffer_handles *Handles, data_type Type, u32 ElementCount); */
 

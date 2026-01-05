@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+
 struct layout;
 struct window_layout;
 

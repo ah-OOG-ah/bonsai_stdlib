@@ -1,3 +1,6 @@
+#pragma once
+
+#include <bonsai/vector.h>
 
 struct rect2
 {

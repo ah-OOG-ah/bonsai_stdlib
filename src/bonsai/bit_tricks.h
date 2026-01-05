@@ -1,4 +1,6 @@
+#pragma once
 
+#include <bonsai/poof_on.h>
 
 poof(
   func gen_bit_operators(T)

@@ -1,3 +1,5 @@
+#include <bonsai/bitmap.h>
+
 #pragma pack(push, 1)
 struct bitmap_image_header
 {

@@ -16,6 +16,9 @@ add_library(Bonsai SHARED
         src/bonsai/poof_on.h
 
         src/bonsai/avx2_v3.h
+        src/bonsai/bitmap.h
+        src/bonsai/bit_tricks.h
+        src/bonsai/colors.h
         src/bonsai/console_macros.h
         src/bonsai/counted_string.h
         src/bonsai/c_parser.h
@@ -33,11 +36,15 @@ add_library(Bonsai SHARED
         src/bonsai/platform_struct.h
         src/bonsai/poof_functions.h
         src/bonsai/primitives.h
+        src/bonsai/rect.h
+        src/bonsai/texture.h
         src/bonsai/thread.h
+        src/bonsai/ui/interactable.h
         src/bonsai/ui/ui.h
         src/bonsai/vector.h
         src/bonsai/work_queue.h
 
+        src/bonsai/bitmap.cpp
         src/bonsai/counted_string.cpp
         src/bonsai/c_parser.cpp
         src/bonsai/file.cpp
@@ -47,6 +54,7 @@ add_library(Bonsai SHARED
         src/bonsai/platform/linux/linux_platform.cpp
         src/bonsai/platform/posix_platform.cpp
         src/bonsai/thread.cpp
+        src/bonsai/ui/ui.cpp
         src/bonsai/work_queue.cpp
 
         bonsai_debug/src/debug_data_system.cpp

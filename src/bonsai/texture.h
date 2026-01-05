@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/gl.h>
+#include <bonsai/vector.h>
+
 enum texture_storage_format
 {
   TextureStorageFormat_Undefined,
