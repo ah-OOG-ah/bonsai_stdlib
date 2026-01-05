@@ -13,11 +13,14 @@ add_compile_options(-mssse3 -mavx -mavx2 -mfma -mvaes)
 
 project(Bonsai)
 add_library(Bonsai SHARED
+        bonsai_debug/debug.h
+        bonsai_debug/debug.cpp
         bonsai_stdlib.h
         bonsai_stdlib.cpp)
 install(TARGETS Bonsai DESTINATION ".")
 
 target_include_directories(Bonsai PUBLIC "${CMAKE_SOURCE_DIR}/")
+target_include_directories(Bonsai PUBLIC "${CMAKE_SOURCE_DIR}/src/")
 
 if (LINUX)
     add_compile_definitions(BONSAI_LINUX)
