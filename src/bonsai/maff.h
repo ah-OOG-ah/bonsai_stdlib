@@ -1,3 +1,10 @@
+#pragma once
+
+#include <bonsai/arccostable.h>
+#include <bonsai/costable.h>
+#include <bonsai/iterators.h>
+#include <bonsai/primitives.h>
+
 #define BONSAI_FAST_MATH__INVSQRT (1)
 #define BONSAI_FAST_MATH__SQRT    (1)
 #define BONSAI_FAST_MATH__ARCCOS  (1)

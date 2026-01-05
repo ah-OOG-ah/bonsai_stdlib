@@ -797,3 +797,5 @@ BeginTemporaryMemory_(const char *SourceLocation, memory_arena *Arena, b32 Repor
 
 inline b32 VaporizeArena(memory_arena *Arena);
 link_internal b32 UnprotectArena(memory_arena *Arena);
+
+inline b32 RewindArena(memory_arena *Arena, umm RestartBlockSize = Megabytes(1) );

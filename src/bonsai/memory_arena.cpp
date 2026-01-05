@@ -1,3 +1,4 @@
+#include <bonsai/memory_arena.h>
 
 inline b32
 VaporizeArena(memory_arena *Arena)
@@ -53,7 +54,7 @@ UnprotectArena(memory_arena *Arena)
 //  @turn_rewind_arena_back_on
 //
 inline b32
-RewindArena(memory_arena *Arena, umm RestartBlockSize = Megabytes(1) )
+RewindArena(memory_arena *Arena, umm RestartBlockSize)
 {
   TIMED_FUNCTION();
 

@@ -19,6 +19,7 @@ add_library(Bonsai SHARED
         src/bonsai/console_macros.h
         src/bonsai/globals.h
         src/bonsai/input.h
+        src/bonsai/maff.h
         src/bonsai/memory_arena.h
         src/bonsai/platform.h
         src/bonsai/platform/linux/linux_platform.h
@@ -32,6 +33,7 @@ add_library(Bonsai SHARED
         src/bonsai/work_queue.h
 
         src/bonsai/initialize.cpp
+        src/bonsai/memory_arena.cpp
         src/bonsai/platform/posix_platform.cpp
         src/bonsai/thread.cpp
         src/bonsai/work_queue.cpp
