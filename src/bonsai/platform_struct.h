@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/thread.h>
+#include <bonsai/work_queue.h>
+
 struct graphics;
 struct server_state;
 

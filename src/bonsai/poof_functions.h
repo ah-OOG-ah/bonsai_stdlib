@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai_stdlib.h>
+
 #if BONSAI_INTERNAL
 #define ENSURE_OWNED_BY_THREAD(ThingPointer) Assert((ThingPointer)->OwnedByThread == ThreadLocal_ThreadIndex)
 #define OWNED_BY_THREAD_MEMBER() s32 OwnedByThread = INVALID_THREAD_LOCAL_THREAD_INDEX

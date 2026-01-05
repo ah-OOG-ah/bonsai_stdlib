@@ -1,3 +1,6 @@
+#pragma once
+
+#include <bonsai/thread.h>
 
 #define WORK_QUEUE_SIZE (4096)
 

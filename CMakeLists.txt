@@ -19,7 +19,10 @@ add_library(Bonsai SHARED
         src/bonsai/platform.h
         src/bonsai/platform/linux/linux_platform.h
         src/bonsai/platform/posix_platform.h
+        src/bonsai/platform_struct.h
+        src/bonsai/poof_functions.h
         src/bonsai/thread.h
+        src/bonsai/work_queue.h
 
         src/bonsai/platform/posix_platform.cpp
         src/bonsai/initialize.cpp
