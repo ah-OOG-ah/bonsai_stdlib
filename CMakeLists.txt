@@ -29,6 +29,7 @@ add_library(Bonsai SHARED
         src/bonsai/input.h
         src/bonsai/maff.h
         src/bonsai/memory_arena.h
+        src/bonsai/perlin.h
         src/bonsai/platform.h
         src/bonsai/platform/linux/linux_file.h
         src/bonsai/platform/linux/linux_platform.h
@@ -36,7 +37,10 @@ add_library(Bonsai SHARED
         src/bonsai/platform_struct.h
         src/bonsai/poof_functions.h
         src/bonsai/primitives.h
+        src/bonsai/random.h
         src/bonsai/rect.h
+        src/bonsai/simd_avx2.h
+        src/bonsai/simd_sse.h
         src/bonsai/texture.h
         src/bonsai/thread.h
         src/bonsai/ui/interactable.h
@@ -50,6 +54,7 @@ add_library(Bonsai SHARED
         src/bonsai/file.cpp
         src/bonsai/initialize.cpp
         src/bonsai/memory_arena.cpp
+        src/bonsai/perlin.cpp
         src/bonsai/platform/linux/linux_file.cpp
         src/bonsai/platform/linux/linux_platform.cpp
         src/bonsai/platform/posix_platform.cpp

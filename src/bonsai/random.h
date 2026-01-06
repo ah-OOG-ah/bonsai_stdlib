@@ -1,3 +1,6 @@
+#pragma once
+
+#include <bonsai/vector.h>
 
 v4 Floor(v4 v)
 {

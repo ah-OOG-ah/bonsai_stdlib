@@ -8,7 +8,7 @@
 
 
 #ifndef BONSAI_NO_AVX
-#include <bonsai_stdlib/src/perlin.cpp>
+//#include <bonsai_stdlib/src/perlin.cpp>
 #endif
 
 #include <bonsai_stdlib/src/assert.cpp>

@@ -1,3 +1,4 @@
+#include <bonsai/perlin.h>
 
 #if 0
 u32_8x

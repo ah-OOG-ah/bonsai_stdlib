@@ -1,3 +1,6 @@
+#pragma once
+
+#include <immintrin.h>
 
 union f32_4x {
   __m128 Sse;
@@ -8,6 +11,14 @@ union u32_4x {
   __m128i Sse;
       u32 E[4];
 };
+
+inline __m128i v16ftoi(__m128 vf) {
+  return _mm_castps_si128(vf);
+}
+
+inline __m128 v16itof(__m128i vf) {
+  return _mm_castsi128_ps(vf);
+}
 
 
 link_inline f32_4x
@@ -46,7 +57,7 @@ Select(u32_4x Mask, f32_4x A, f32_4x B)
   // NOTE(Jesse): These are equal in performance when computing Perlin noise in
   // SSE but using blendv is significantly faster in AVX
   /* f32_4x Result = {{_mm_or_ps(_mm_and_ps(Mask.Sse, A.Sse), _mm_andnot_ps(Mask.Sse, B.Sse))}}; */
-  f32_4x Result = {{ _mm_blendv_ps(B.Sse, A.Sse, Mask.Sse) }};
+  f32_4x Result = {{ _mm_blendv_ps(B.Sse, A.Sse, v16itof(Mask.Sse)) }};
   return Result;
 }
 
@@ -138,7 +149,7 @@ operator/(u32_4x A, u32_4x B)
 link_inline u32_4x
 operator==(f32_4x A, f32_4x B)
 {
-  u32_4x Result = {{ _mm_cmpeq_epi32(A.Sse, B.Sse) }};
+  u32_4x Result = {{ _mm_cmpeq_epi32(v16ftoi(A.Sse), v16ftoi(B.Sse)) }};
   return Result;
 }
 

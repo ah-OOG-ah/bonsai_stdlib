@@ -1,3 +1,6 @@
+#pragma once
+
+#include <immintrin.h>
 
 union f32_8x {
   __m256 Sse;
@@ -11,6 +14,14 @@ union u32_8x {
       u32 E[8];
   u32 operator[](s32 Index);
 };
+
+inline __m256i v32ftoi(__m256 vf) {
+  return _mm256_castps_si256(vf);
+}
+
+inline __m256 v32itof(__m256i vf) {
+  return _mm256_castsi256_ps(vf);
+}
 
 
 
@@ -110,7 +121,7 @@ U32_8X(u32 *A)
 link_inline f32_8x
 Select(u32_8x Mask, f32_8x A, f32_8x B)
 {
-  f32_8x Result = {{ _mm256_blendv_ps( B.Sse, A.Sse, Mask.Sse ) }};
+  f32_8x Result = {{ _mm256_blendv_ps( B.Sse, A.Sse, v32itof(Mask.Sse) ) }};
   return Result;
 }
 
@@ -118,8 +129,8 @@ link_inline u32_8x
 Select(u32_8x Mask, u32_8x A, u32_8x B)
 {
   // NOTE(Jesse): The blendv instruction is 3 cycles/cell faster for computing perlin noise in AVX
-  /* u32_8x Result = {{_mm256_or_ps(_mm256_and_ps(Mask.Sse, A.Sse), _mm256_andnot_ps(Mask.Sse, B.Sse))}}; */
-  u32_8x Result = {{ _mm256_blendv_ps( B.Sse, A.Sse, _mm256_castsi256_ps( Mask.Sse ) ) }};
+  //*u32_8x Result = {{_mm256_or_ps(_mm256_and_ps(Mask.Sse, A.Sse), _mm256_andnot_ps(Mask.Sse, B.Sse))}}; //*/
+  u32_8x Result = {{ v32ftoi(_mm256_blendv_ps( v32itof(B.Sse), v32itof(A.Sse), _mm256_castsi256_ps( Mask.Sse ))) }};
   return Result;
 }
 
@@ -211,28 +222,28 @@ operator^(f32_8x A, f32_8x B)
 link_inline u32_8x
 operator<(f32_8x A, f32_8x B)
 {
-  u32_8x Result = {{ _mm256_cmp_ps( A.Sse, B.Sse, _CMP_LT_OS) }};
+  u32_8x Result = {{ v32ftoi(_mm256_cmp_ps( A.Sse, B.Sse, _CMP_LT_OS)) }};
   return Result;
 }
 
 link_inline u32_8x
 operator>(f32_8x A, f32_8x B)
 {
-  u32_8x Result = {{ _mm256_cmp_ps( A.Sse, B.Sse, _CMP_GT_OS) }};
+  u32_8x Result = {{ v32ftoi(_mm256_cmp_ps( A.Sse, B.Sse, _CMP_GT_OS)) }};
   return Result;
 }
 
 link_inline u32_8x
 operator<(f32_8x A, f32 B)
 {
-  u32_8x Result = {{ _mm256_cmp_ps( A.Sse, F32_8X(B).Sse, _CMP_LT_OS) }};
+  u32_8x Result = {{ v32ftoi(_mm256_cmp_ps( A.Sse, F32_8X(B).Sse, _CMP_LT_OS)) }};
   return Result;
 }
 
 link_inline u32_8x
 operator>(f32_8x A, f32 B)
 {
-  u32_8x Result = {{ _mm256_cmp_ps( A.Sse, F32_8X(B).Sse, _CMP_GT_OS) }};
+  u32_8x Result = {{ v32ftoi(_mm256_cmp_ps( A.Sse, F32_8X(B).Sse, _CMP_GT_OS)) }};
   return Result;
 }
 
@@ -308,7 +319,7 @@ operator^(u32_8x A, u32_8x B)
 link_inline u32_8x
 operator==(f32_8x A, f32_8x B)
 {
-  u32_8x Result = {{ _mm256_cmpeq_epi32(A.Sse, B.Sse) }};
+  u32_8x Result = {{ _mm256_cmpeq_epi32(v32ftoi(A.Sse), v32ftoi(B.Sse)) }};
   return Result;
 }
 

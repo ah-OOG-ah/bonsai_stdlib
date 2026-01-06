@@ -1,3 +1,11 @@
+#pragma once
+
+#include <bonsai/file.h>
+#include <bonsai/primitives.h>
+#include <bonsai/simd_avx2.h>
+#include <bonsai/simd_sse.h>
+#include <bonsai/vector.h>
+
 struct perlin_params
 {
   u32_8x P0;
