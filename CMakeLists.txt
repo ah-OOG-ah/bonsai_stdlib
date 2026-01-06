@@ -15,6 +15,7 @@ project(Bonsai)
 add_library(Bonsai SHARED
         src/bonsai/poof_on.h
 
+        src/bonsai/arccostable.h
         src/bonsai/avx2_v3.h
         src/bonsai/bitmap.h
         src/bonsai/bit_tricks.h

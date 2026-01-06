@@ -1,5 +1,7 @@
 #pragma once
 
+#include <bonsai/primitives.h>
+
 // TODO(Jesse, global_cleanup): Put these on stdlib ..?
 global_variable b32 Global_DoRuntimeBreak = 1;
 
