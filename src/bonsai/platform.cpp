@@ -1,3 +1,4 @@
+#include <bonsai/platform.h>
 
 //#if BONSAI_LINUX || BONSAI_EMCC
 //#include <bonsai_stdlib/src/platform/posix_platform.cpp>

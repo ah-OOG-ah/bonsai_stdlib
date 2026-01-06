@@ -1,7 +1,6 @@
 #pragma once
 
 #include <bonsai/platform.h>
-#include <bonsai/poof_functions.h>
 
 #define ReadBarrier  asm volatile("" ::: "memory"); _mm_lfence()
 #define WriteBarrier asm volatile("" ::: "memory"); _mm_sfence()

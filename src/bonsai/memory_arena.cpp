@@ -1,5 +1,7 @@
 #include <bonsai/memory_arena.h>
 
+#include <bonsai_debug/src/api.h>
+
 inline b32
 VaporizeArena(memory_arena *Arena)
 {

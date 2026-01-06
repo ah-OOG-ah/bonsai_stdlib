@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/platform.h>
+#include <bonsai/primitives.h>
 
 inline void*
 AtomicReplace( volatile void **Source, void *Exchange)

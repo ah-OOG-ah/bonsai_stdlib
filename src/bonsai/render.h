@@ -1,3 +1,9 @@
+#pragma once
+
+#include <bonsai/gpu_mapped_buffer.h>
+#include <bonsai/framebuffer.h>
+#include <bonsai/matrix.h>
+#include <bonsai/shader.h>
 
 struct render_to_texture_group
 {

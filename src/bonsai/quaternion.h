@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/primitives.h>
+#include <bonsai/vector.h>
+
 union Quaternion
 {
   float E[4];

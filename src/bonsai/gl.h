@@ -1,3 +1,10 @@
+#pragma once
+
+#include <bonsai/platform.h>
+
+#include <cstddef>
+
+
 //
 // Wrapper so assertions give us file/line numbers
 

@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/primitives.h>
+
 struct vertex_material
 poof(@do_editor_ui)
 {

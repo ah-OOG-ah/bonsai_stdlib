@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/vector.h>
+
 struct m4
 {
   v4 E[4];

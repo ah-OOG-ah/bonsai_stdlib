@@ -99,9 +99,14 @@ struct memory_arena;
 link_internal memory_arena* GetTranArena();
 
 link_internal counted_string
+FormatCountedString_(memory_arena* Memory, counted_string FS, ...);
+
+link_internal counted_string
 FormatCountedString_(char *Dest, umm DestSize, cs Fmt, ...);
 
 link_internal char * GetTempFmtBuffer();
+
+counted_string CountedString(umm Count, memory_arena* Memory);
 
 #define InvalidCase(C) case C: {Error("Invalid case value (" #C ") " __FILE__ ":" STRINGIZE(__LINE__));} break
 #define InvalidDefaultCase default: {Error("Invalid case value (default) " __FILE__ ":" STRINGIZE(__LINE__));} break

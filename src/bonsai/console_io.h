@@ -1,3 +1,10 @@
+#pragma once
+
+#include <bonsai/console_macros.h>
+#include <bonsai/platform.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/primitives.h>
+
 #define CLI_SUCCESS_EXIT_CODE 0
 #define CLI_FAILURE_EXIT_CODE 1
 

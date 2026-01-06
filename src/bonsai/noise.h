@@ -1,4 +1,6 @@
+#pragma once
 
+#include <bonsai/vector.h>
 
 #if 0
 v2 hash( v2 x )   // this hash is not production ready, please

@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/poof_on.h>
+
 poof(
   func triple_buffered(type, buffer_t)
   {

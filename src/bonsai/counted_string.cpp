@@ -1,17 +1,9 @@
 #include <bonsai/counted_string.h>
 
 #include <bonsai/heap_allocator.h>
+#include <bonsai/poof_functions.h>
 #include <bonsai/vector.h>
-
-// This is to silence the warnings when passing counted_strings
-#define FormatCountedString(Memory, Fmt, ...)             \
-  _Pragma("clang diagnostic push")                        \
-  _Pragma("clang diagnostic ignored \"-Wclass-varargs\"") \
-  FormatCountedString_(Memory, Fmt, __VA_ARGS__)          \
-  _Pragma("clang diagnostic pop")
-
-#define FCS(Fmt, ...) FormatCountedString(GetTranArena(), Fmt, __VA_ARGS__)
-#define FSz(Fmt, ...) FormatCountedString(GetTranArena(), CSz(Fmt), __VA_ARGS__)
+#include <bonsai_debug/src/api.h>
 
 link_internal u8*
 HeapAllocate(heap_allocator *Allocator, umm RequestedSize);

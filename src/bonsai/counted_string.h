@@ -1,9 +1,20 @@
 #pragma once
 
-#include <bonsai/assert.h>
+#include <bonsai/bitmap.h>
 #include <bonsai/console_macros.h>
 #include <bonsai/memory_arena.h>
 #include <bonsai/primitives.h>
+#include <bonsai/stream.h>
+
+// This is to silence the warnings when passing counted_strings
+#define FormatCountedString(Memory, Fmt, ...)             \
+_Pragma("clang diagnostic push")                        \
+_Pragma("clang diagnostic ignored \"-Wclass-varargs\"") \
+FormatCountedString_(Memory, Fmt, __VA_ARGS__)          \
+_Pragma("clang diagnostic pop")
+
+#define FCS(Fmt, ...) FormatCountedString(GetTranArena(), Fmt, __VA_ARGS__)
+#define FSz(Fmt, ...) FormatCountedString(GetTranArena(), CSz(Fmt), __VA_ARGS__)
 
 link_internal void
 CopyString(cs *Src, cs *Dest)

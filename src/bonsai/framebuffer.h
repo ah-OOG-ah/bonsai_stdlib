@@ -1,3 +1,6 @@
+#pragma once
+
+#include <bonsai/primitives.h>
 
 struct framebuffer
 {

@@ -1,3 +1,5 @@
+#pragma once
+
 #if POOF_PREPROCESSOR || BONSAI_PREPROCESSOR
 
 

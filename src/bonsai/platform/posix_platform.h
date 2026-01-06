@@ -1,7 +1,6 @@
 #pragma once
 
 #include <bonsai/primitives.h>
-#include <bonsai/thread.h>
 
 #include <stdio.h>
 #include <pthread.h>
@@ -47,6 +46,8 @@ u32 PlatformGetLogicalCoreCount();
 
 link_internal void SleepMs(u32 Ms);
 
+// forwards decl. from thread.h
+typedef THREAD_MAIN_RETURN (*thread_main_callback_type)(void*);
 u32 PlatformCreateThread( thread_main_callback_type ThreadMain, void *Params, s32 ThreadId);
 
 inline void

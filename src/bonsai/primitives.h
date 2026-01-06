@@ -203,6 +203,7 @@ struct counted_string
 
 typedef counted_string cs;
 
+// Suspicous - implemented in counted_string.h
 link_internal b32 AreEqual(cs *S1, cs *S2);
 link_internal b32 AreEqual(cs S1, cs S2);
 link_internal b32 AreEqual(const char *S1, const char *S2);

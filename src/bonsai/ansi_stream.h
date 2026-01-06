@@ -1,3 +1,12 @@
+#pragma once
+
+#include <bonsai/poof_on.h>
+
+#include <bonsai/counted_string.h>
+#include <bonsai/memory_arena.h>
+#include <bonsai/primitives.h>
+#include <bonsai/stream.h>
+
 // TODO(Jesse): Seems like this and binary_parser.h have a lot of overlap..
 
 poof(generate_cursor(u8))

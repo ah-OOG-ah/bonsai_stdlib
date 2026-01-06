@@ -1,3 +1,6 @@
+#pragma once
+
+#include <bonsai/counted_string.h>
 
 struct sort_key_string
 {

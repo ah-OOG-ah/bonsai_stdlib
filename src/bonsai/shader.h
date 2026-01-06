@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/poof_on.h>
+#include <bonsai/texture.h>
+
 #define INVALID_SHADER_UNIFORM (-1)
 #define INVALID_SHADER (u32)(-1)
 

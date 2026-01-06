@@ -1,3 +1,7 @@
+#include <bonsai/vector.h>
+
+#include <bonsai/memory_arena.h>
+#include <bonsai/stream.h>
 
 poof(buffer(v3i))
 #include <generated/buffer_v3i.h>

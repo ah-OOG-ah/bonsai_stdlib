@@ -1,5 +1,8 @@
 #include <bonsai/perlin.h>
 
+#include <bonsai/memory_arena.h>
+#include <bonsai_debug/src/api.h>
+
 #if 0
 u32_8x
 SM4Hash(u32_8x Seed, u32_8x x, u32_8x y, u32_8x z)

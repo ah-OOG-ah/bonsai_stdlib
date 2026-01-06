@@ -1,3 +1,5 @@
+#pragma once
+
 #define MUTEX_OPS_PER_FRAME (64)
 
 enum mutex_op

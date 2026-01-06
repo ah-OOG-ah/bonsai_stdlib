@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/memory_arena.h>
+#include <bonsai/primitives.h>
+
 u32
 ChrisWellonsIntegerHash_lowbias32(u32 x)
 {

@@ -1,3 +1,7 @@
+#pragma once
+
+#include <bonsai/primitives.h>
+
 // NOTE(Jesse): Add a duplicate for the max value so we can blindly add 1 to the lookup index and not overflow (to lerp)
 //
 // NOTE(Jesse): Manually edited the PI/2, PI, 3PI/2 values to exactly 0.f, 1.f, 0.f respectively

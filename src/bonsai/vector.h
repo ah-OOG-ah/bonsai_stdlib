@@ -2,7 +2,6 @@
 
 #include <bonsai/assert.h>
 #include <bonsai/maff.h>
-#include <bonsai_stdlib.h>
 
 /* #if BONSAI_EMCC */
 /* #include <wasm_simd128.h> */

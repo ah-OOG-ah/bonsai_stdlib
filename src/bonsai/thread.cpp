@@ -1,6 +1,11 @@
 #include <bonsai/thread.h>
+
 #include <bonsai/maff.h>
 #include <bonsai/memory_arena.h>
+#include <bonsai/poof_on.h>
+#include <bonsai/stdlib.h>
+
+#include <bonsai_debug/src/api.h>
 
 poof(buffer(thread_main_callback_type))
 #include <generated/buffer_thread_main_callback_type.h>
@@ -59,11 +64,12 @@ WaitOnFutex(bonsai_futex *Futex, b32 DoSleep)
 link_internal thread_local_state
 DefaultThreadLocalState(s32 ThreadIndex, platform *Plat, void *UserData)
 {
-  Assert(Global_Stdlib);
+  auto stdlib = GetStdlib();
+  Assert(stdlib);
 
   thread_local_state Thread = {};
 
-  Thread.Stdlib = Global_Stdlib;
+  Thread.Stdlib = stdlib;
   Thread.ThreadIndex = ThreadIndex;
   Thread.TempMemory = AllocateArena();
   Thread.PermMemory = AllocateArena(Megabytes(8));
@@ -100,8 +106,8 @@ Initialize_ThreadLocal_ThreadStates(platform *Plat, s32 TotalThreadCount, void *
 link_internal void
 WorkerThread_BeforeJobStart(thread_local_state *Thread)
 {
-  Global_Stdlib = Thread->Stdlib;
-  Assert(Global_Stdlib);
+  setGlobalStdlib(Thread->Stdlib);
+  Assert(GetStdlib());
 
   if (ThreadLocal_ThreadIndex == INVALID_THREAD_LOCAL_THREAD_INDEX) { SetThreadLocal_ThreadIndex(Thread->ThreadIndex); }
 
@@ -117,14 +123,13 @@ GetThreadLocalState(s32 ThreadIndex)
 {
   Assert(ThreadIndex < (s32)GetTotalThreadCount());
 
-  auto Stdlib = GetStdlib();
   if (ThreadIndex >= 0)
   {
-    return Stdlib->ThreadStates + ThreadIndex;
+    return getThreadStates() + ThreadIndex;
   }
   else
   {
-    return &Stdlib->DefaultThreadState;
+    return getDefaultThreadState();
   }
 
 }

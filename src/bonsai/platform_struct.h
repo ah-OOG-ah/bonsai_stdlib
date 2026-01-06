@@ -1,6 +1,6 @@
 #pragma once
 
-#include <bonsai/thread.h>
+#include <bonsai/input.h>
 #include <bonsai/work_queue.h>
 
 struct graphics;

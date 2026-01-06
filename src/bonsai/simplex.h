@@ -1,3 +1,5 @@
+#pragma once
+
 #if 0
 
 v3 mod289(v3 x)

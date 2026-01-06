@@ -1,3 +1,5 @@
+#pragma once
+
 #define IterateOver(Container, ElementPtrName, IndexVariableName)      \
   auto IndexVariableName = ZerothIndex(Container);                     \
   for (auto *ElementPtrName = TryGetPtr(Container, IndexVariableName); \

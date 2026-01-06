@@ -1,3 +1,8 @@
+#pragma once
+
+#include <bonsai/counted_string.h>
+#include <bonsai/primitives.h>
+
 struct string_builder
 {
   counted_string_block_array Chunks;

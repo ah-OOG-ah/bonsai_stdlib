@@ -4,6 +4,7 @@
 #include <bonsai/globals.h>
 #include <bonsai/console_macros.h>
 #include <bonsai/platform/posix_platform.h>
+//#include <bonsai/platform_struct.h>
 
 /* #include <linux/ftrace.h> */
 /* #include <linux/getcpu.h> */
@@ -993,6 +994,8 @@ PlatformChangeDirectory(const char *Dir)
   return Result;
 }
 
+// forward decl from platform_struct.h
+struct platform;
 b32 ProcessOsMessages(os *Os, platform *Plat);
 inline void BonsaiSwapBuffers(os *Os);
 

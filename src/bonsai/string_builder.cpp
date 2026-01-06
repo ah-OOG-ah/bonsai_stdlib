@@ -1,3 +1,7 @@
+#include <bonsai/string_builder.h>
+
+#include <bonsai_debug/src/api.h>
+
 link_internal string_builder
 StringBuilder()
 {

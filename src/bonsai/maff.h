@@ -5,6 +5,11 @@
 #include <bonsai/iterators.h>
 #include <bonsai/primitives.h>
 
+#include <bonsai/assert.h>
+#include <bonsai/console_macros.h>
+
+#include <immintrin.h>
+
 #define BONSAI_FAST_MATH__INVSQRT (1)
 #define BONSAI_FAST_MATH__SQRT    (1)
 #define BONSAI_FAST_MATH__ARCCOS  (1)
@@ -578,7 +583,7 @@ link_inline  f32
 InverseSquareRoot(f32 x)
 {
   if (x == 0) return 0.f;
-#if BONSAI_FAST_MATH__INVSQRT 
+#if BONSAI_FAST_MATH__INVSQRT
   // TODO(Jesse): Is this actually even faster than doing a sqrt?  Apparently
   // set_ps1 is a "Sequence" instruction (according to Intel Intrinsics Guide)
   // and might be slow ..?  Should check into this.

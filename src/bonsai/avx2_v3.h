@@ -2,6 +2,9 @@
 
 #include <bonsai/iterators.h>
 #include <bonsai/simd_avx2.h>
+#include <x86intrin.h>
+#include <immintrin.h>
+#include <smmintrin.h>
 
 union v3_8x
 {

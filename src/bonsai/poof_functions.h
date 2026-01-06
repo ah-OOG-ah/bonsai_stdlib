@@ -1,6 +1,6 @@
 #pragma once
 
-#include <bonsai_stdlib.h>
+#include <bonsai/poof_on.h>
 
 #if BONSAI_INTERNAL
 #define ENSURE_OWNED_BY_THREAD(ThingPointer) Assert((ThingPointer)->OwnedByThread == ThreadLocal_ThreadIndex)

@@ -1,3 +1,4 @@
+#pragma once
 
 template <typename element_t, typename stream_t>inline element_t *
 Push(element_t Element, stream_t *Array)
