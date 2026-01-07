@@ -45,9 +45,17 @@ add_library(perlin_avx2 SHARED
     src/console_macros.h
     src/globals.h
 
+    src/memory_arena.h
+    src/file.h
+
     src/assert.cpp
+    src/file.cpp
     src/perlin_avx2.cpp)
-install(TARGETS perlin_avx2 DESTINATION "./bonsai/")
+
+add_executable(perlin
+    src/examples/perlin.cpp)
+target_link_libraries(perlin perlin_avx2)
+install(TARGETS perlin_avx2 perlin DESTINATION "./bonsai/")
 
 target_include_directories(perlin_avx2 PUBLIC "${CMAKE_SOURCE_DIR}/")
 

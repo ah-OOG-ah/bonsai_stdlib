@@ -1,5 +1,5 @@
 
-#include "perlin_avx2.h"
+#include "src/perlin_avx2.h"
 
 int main()
 {

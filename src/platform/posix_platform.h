@@ -1,3 +1,7 @@
+#pragma once
+
+#include "../primitives.h"
+
 #include <stdio.h>
 #include <pthread.h>
 

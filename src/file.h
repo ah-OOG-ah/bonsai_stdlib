@@ -1,3 +1,8 @@
+#pragma once
+
+#include "platform.h"
+#include "primitives.h"
+
 struct random_series;
 struct memory_arena;
 struct ansi_stream;

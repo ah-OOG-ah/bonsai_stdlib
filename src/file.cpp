@@ -1,3 +1,7 @@
+#include "file.h"
+
+#include "memory_arena.h"
+
 #define TMP_DIR_ROOT "tmp/"
 
 #include <sys/stat.h>

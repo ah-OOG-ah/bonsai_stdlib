@@ -1,3 +1,8 @@
+#pragma once
+
+#include "maff.h"
+#include "thread.h"
+
 #define MEMPROTECT (MEMPROTECT_OVERFLOW || MEMPROTECT_UNDERFLOW)
 /* #define MEMPROTECT_UNDERFLOW (0) */
 /* #define MEMPROTECT_OVERFLOW (0) */

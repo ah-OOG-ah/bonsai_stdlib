@@ -1,3 +1,9 @@
+#pragma once
+
+#include "../../assert.h"
+#include "../../console_macros.h"
+#include "../../globals.h"
+
 /* #include <linux/ftrace.h> */
 /* #include <linux/getcpu.h> */
 
