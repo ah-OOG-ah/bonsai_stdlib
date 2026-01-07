@@ -1,3 +1,4 @@
+#pragma once
 
 union f32_8x {
   __m256 Sse;
