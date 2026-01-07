@@ -32,9 +32,20 @@ add_compile_definitions(BONSAI_INTERNAL=1)
 add_library(perlin_avx2 SHARED
     src/iterators.h
     src/primitives.h
+    src/assert.h
     src/simd.h
+    src/costable.h
+    src/arccostable.h
+    src/maff.h
+    src/vector.h
     src/simd_avx2.h
     src/perlin_avx2.h
+
+    src/platform.h
+    src/console_macros.h
+    src/globals.h
+
+    src/assert.cpp
     src/perlin_avx2.cpp)
 install(TARGETS perlin_avx2 DESTINATION "./bonsai/")
 

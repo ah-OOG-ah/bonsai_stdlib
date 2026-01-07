@@ -1,3 +1,10 @@
+#include "assert.h"
+
+#include "globals.h"
+#include "console_macros.h"
+#include "platform.h"
+#include "primitives.h"
+
 void assert_fail(cs FmtString, cs Condition, const char *Function)
 {
   LogDirect(CSz("%S ! FAILED%S  - "), TerminalColors.Red, TerminalColors.White);

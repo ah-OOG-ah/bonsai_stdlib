@@ -1,5 +1,7 @@
 #pragma once
 
+#include "primitives.h"
+
 #define STRINGIZE2(x) #x
 #define STRINGIZE(x) STRINGIZE2(x)
 #define LINE_STRING STRINGIZE(__LINE__)

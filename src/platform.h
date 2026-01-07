@@ -1,3 +1,5 @@
+#pragma once
+
 #define CACHE_LINE_SIZE (64)
 
 // TODO(Jesse)(metaprogramming): This can certainly be metaprogrammed.  Probably
@@ -28,8 +30,8 @@
 #include <bonsai_stdlib/src/platform/win32/win32_platform.h>
 
 #elif BONSAI_LINUX
-#include <bonsai_stdlib/src/platform/posix_platform.h>
-#include <bonsai_stdlib/src/platform/linux/linux_platform.h>
+#include "platform/posix_platform.h"
+#include "platform/linux/linux_platform.h"
 
 #elif BONSAI_EMCC
 #include <bonsai_stdlib/src/platform/posix_platform.h>
